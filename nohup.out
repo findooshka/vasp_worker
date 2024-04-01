@@ -1,0 +1,9 @@
+{'assigned_id': 'c9663a9e-9afe-45e1-9d53-dd4a428a1100', 'message': 'New worker acknowledged'}
+Registered with worker ID: c9663a9e-9afe-45e1-9d53-dd4a428a1100
+ * Serving Flask app 'worker'
+ * Debug mode: off
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8130
+ * Running on http://10.40.5.201:8130
+[33mPress CTRL+C to quit[0m

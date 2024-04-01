@@ -1,0 +1,28 @@
+ running on   35 total cores
+ distrk:  each k-point on   35 cores,    1 groups
+ distr:  one band on    7 cores,    5 groups
+ using from now: INCAR     
+ vasp.5.4.4.18Apr17-6-g9f103f2a35 (build Apr 24 2023 09:55:28) complex          
+  
+ POSCAR found type information on POSCAR  Li
+ POSCAR found :  1 types and       2 ions
+ scaLAPACK will be used
+ LDA part: xc-table for Pade appr. of Perdew
+ generate k-points for:    9    9    9
+ POSCAR, INCAR and KPOINTS ok, starting setup
+ FFT: planning ...
+ WAVECAR not read
+ entering main loop
+       N       E                     dE             d eps       ncg     rms          rms(c)
+DAV:   1    -0.319051891168E+01   -0.31905E+01   -0.50104E+02   370   0.188E+02
+DAV:   2    -0.379110561643E+01   -0.60059E+00   -0.53702E+00   475   0.115E+01
+DAV:   3    -0.379896254329E+01   -0.78569E-02   -0.78569E-02   460   0.161E+00
+DAV:   4    -0.379900265951E+01   -0.40116E-04   -0.40116E-04   510   0.829E-02
+DAV:   5    -0.379900288052E+01   -0.22101E-06   -0.22100E-06   470   0.384E-03    0.192E-01
+DAV:   6    -0.379703743156E+01    0.19654E-02   -0.96307E-05   410   0.519E-02    0.126E-01
+DAV:   7    -0.379577905915E+01    0.12584E-02   -0.27458E-04   385   0.914E-02    0.607E-03
+DAV:   8    -0.379573589289E+01    0.43166E-04   -0.29725E-06   350   0.117E-02    0.226E-03
+DAV:   9    -0.379572867957E+01    0.72133E-05   -0.71399E-07   195   0.569E-03
+   1 F= -.37957287E+01 E0= -.37955439E+01  d E =-.379573E+01
+ BRION: g(F)=  0.339E-67 g(S)=  0.118E-05
+ reached required accuracy - stopping structural energy minimisation
