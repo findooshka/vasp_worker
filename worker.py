@@ -195,7 +195,9 @@ def check_worker():
     # the server is a worrywart, they check on their workers from time to time
     # hafta tell them we're alright :)
     pause = "paused" if is_paused() else "running"
-    return jsonify({"status": "I am okay ^^", "paused": pause})
+    with lock:
+        idle = "idle" if task.state == "pending" else "busy"
+    return jsonify({"status": "I am okay ^^", "paused": pause, "idle": idle})
 
 def run_worker_server():
     worker_app.run(host='0.0.0.0', port=8130)
@@ -214,7 +216,7 @@ def register_worker():
                 #return True
             else:
                 print("Could not register the worker, going to sleep")
-        time.sleep(20)
+        time.sleep(30)
         
 if __name__ == "__main__":
     #while not register_worker():
