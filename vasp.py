@@ -68,8 +68,8 @@ def vasp_energy():
         structure = Structure.from_file(os.path.join('vasp', 'POSCAR'))
     except:
         return None
-    #if check_distances(structure):
-    #    return None
+    if check_distances(structure):
+        return None
     #Poscar(structure).write_file(os.path.join('vasp', 'POSCAR'))
     os.chdir('vasp')
     try:
