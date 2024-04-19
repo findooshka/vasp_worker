@@ -12,6 +12,16 @@ def choose_pot(element):
         return 'Zr_sv'
     if element == 'Ca':
         return 'Ca_sv'
+    if element == 'Zr':
+        return 'Zr_sv'
+    if element == 'Cs':
+        return 'Cs_sv'
+    if element == 'Ba':
+        return 'Ba_sv'
+    if element == 'K':
+        return 'K_pv'
+    if element == 'Nb':
+        return 'Nb_sv'
     return element
 
 def make_potcar():
