@@ -60,18 +60,6 @@ def read_energy():
     return energy
 
 def vasp_energy():
-    #reference_energies = {
-    #    'Re': -12.42453,
-    #    'V': -8.94119,
-    #    'Zr': -8.51973,
-    #    'Ca': -1.92,
-    #    'Fe': -8.237,
-    #    'B': -6.703473333333333,
-    #    'P': -5.404,
-    #    'Sc': -6.20184,
-    #    'Hf': -9.95767,
-    #    'Be': -3.76536,
-    #}
     with open(os.path.join('vasp', 'reference_energies.yml'), 'r') as f:
         reference_energies = yaml.safe_load(f)
     try:
@@ -84,7 +72,7 @@ def vasp_energy():
     os.chdir('vasp')
     try:
         setup_files()
-        out = subprocess.run([os.path.join('./run_vasp.sh')], capture_output=True)
+        out = subprocess.run([os.path.join('./run_vasp.sh')], capture_output=True, timeout=1500)
         with open('vasp_output.txt', 'r') as f:
             success = 'Error' not in f.read()
     except Exception as e:
