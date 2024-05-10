@@ -8,21 +8,9 @@ import subprocess, os
 from pathlib import Path
 
 def choose_pot(element):
-    if element == 'Zr':
-        return 'Zr_sv'
-    if element == 'Ca':
-        return 'Ca_sv'
-    if element == 'Zr':
-        return 'Zr_sv'
-    if element == 'Cs':
-        return 'Cs_sv'
-    if element == 'Ba':
-        return 'Ba_sv'
-    if element == 'K':
-        return 'K_pv'
-    if element == 'Nb':
-        return 'Nb_sv'
-    return element
+    if os.path.exists(os.path.join('pots', element, 'POTCAR')):
+        return element
+    return element + '_sv'
 
 def make_potcar():
     with open('POSCAR', 'r') as f:
@@ -72,7 +60,7 @@ def vasp_energy():
     os.chdir('vasp')
     try:
         setup_files()
-        out = subprocess.run([os.path.join('./run_vasp.sh')], capture_output=True, timeout=1500)
+        out = subprocess.run([os.path.join('./run_vasp.sh')], capture_output=True, timeout=25000)
         with open('vasp_output.txt', 'r') as f:
             success = 'Error' not in f.read()
     except Exception as e:

@@ -21,7 +21,7 @@ electronic minimization:
 
 Ionic Relaxation
   EDIFFG    = 1E-4      # stop-criterion for IOM, =10*EDIFF, or <0 for condition on forces
-  NSW       = 3      # number of steps for IOM
+  NSW       = 10      # number of steps for IOM
   ISIF      =    3  # relax: 2 (ion), 3 (all), 4 (ion+shape), 5(shape), 6(shape+vol), 7-(vol)
   IBRION    =    1  # ionic relax: 0 (MD), 1 (quasi-New), 2 (CG), 6 (elastic-cons ISIF>2)
   POTIM     = 0.10  # time-step for ionic-motion
